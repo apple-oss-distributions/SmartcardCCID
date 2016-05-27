@@ -17,10 +17,6 @@
 	Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 
-/*
- * $Id: ccid_usb.h 5473 2011-01-04 09:52:26Z rousseau $
- */
-
 #ifndef __CCID_USB_H__
 #define __CCID_USB_H__
 status_t OpenUSB(unsigned int reader_index, int channel);

@@ -17,9 +17,7 @@
 	Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 
-/*
- * $Id: defs.h 6305 2012-05-19 08:10:08Z rousseau $
- */
+#define max( a, b )   ( ( ( a ) > ( b ) ) ? ( a ) : ( b ) )
 
 #include <pcsclite.h>
 
@@ -31,12 +29,12 @@ typedef struct CCID_DESC
 	 * ATR
 	 */
 	int nATRLength;
-	UCHAR pcATRBuffer[MAX_ATR_SIZE];
+	unsigned char pcATRBuffer[MAX_ATR_SIZE];
 
 	/*
 	 * Card state
 	 */
-	UCHAR bPowerFlags;
+	unsigned char bPowerFlags;
 
 	/*
 	 * T=1 Protocol context

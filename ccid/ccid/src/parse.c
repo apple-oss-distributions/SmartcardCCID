@@ -17,16 +17,13 @@
 	Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 
-/*
- * $Id: parse.c 6633 2013-05-22 14:11:37Z rousseau $
- */
-
 #include <stdio.h>
 #include <string.h>
 # ifdef S_SPLINT_S
 # include <sys/types.h>
 # endif
 #include <errno.h>
+#include <unistd.h>
 
 #include "defs.h"
 #include "ccid.h"

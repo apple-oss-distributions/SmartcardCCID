@@ -17,10 +17,6 @@
 	Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 
-/*
- * $Id: utils.h 4973 2010-06-01 09:43:29Z rousseau $
- */
-
 #ifndef TRUE
 #define FALSE 0
 #define TRUE 1

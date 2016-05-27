@@ -17,10 +17,6 @@
 	Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 
-/*
- * $Id: ccid_serial.h 4973 2010-06-01 09:43:29Z rousseau $
- */
-
 #ifndef __CCID_SERAL_H__
 #define __CCID_SERAL_H__
 

@@ -17,10 +17,6 @@
     Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-/*
- * $Id: PCSCv2part10.h 6429 2012-08-10 13:20:29Z rousseau $
- */
-
 #ifndef __reader_h__
 
 #ifdef HAVE_CONFIG_H
