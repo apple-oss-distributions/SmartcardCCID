@@ -67,6 +67,21 @@ int ccid_open_hack_pre(unsigned int reader_index)
 			ccid_descriptor->readTimeout = 60*1000; /* 60 seconds */
 			break;
 
+#ifdef ENABLE_ZLP
+		case GEMPCTWIN:
+		case GEMPCKEY:
+		case DELLSCRK:
+			/* Only the chipset with firmware version 2.00 is "bogus"
+			 * The reader may send packets of 0 bytes when the reader is
+			 * connected to a USB 3 port */
+			if (0x0200 == ccid_descriptor->IFD_bcdDevice)
+			{
+				ccid_descriptor->zlp = TRUE;
+				DEBUG_INFO1("ZLP fixup");
+			}
+			break;
+#endif
+
 		case OZ776:
 		case OZ776_7772:
 			ccid_descriptor->dwMaxDataRate = 9600;
@@ -446,7 +461,7 @@ int ccid_open_hack_post(unsigned int reader_index)
 					length_res = sizeof(res);
 					if (IFD_SUCCESS == CmdEscape(reader_index, cmd2, sizeof(cmd2), res, &length_res, DEFAULT_COM_READ_TIMEOUT))
 					{
-						DEBUG_COMM("Disable SPE retry counter successfull");
+						DEBUG_COMM("Disable SPE retry counter successful");
 					}
 					else
 					{
